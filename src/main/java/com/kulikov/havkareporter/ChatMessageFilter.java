@@ -89,7 +89,7 @@ public class ChatMessageFilter {
             return messageContent.contains("-");
         }
         else if(voteType.equalsIgnoreCase("all")){
-            return ( messageContent.contains("+") & messageContent.contains("-"));
+            return ( messageContent.contains("+") | messageContent.contains("-"));
         }
         else{
             throw new IllegalArgumentException(String.format("'%s' - unsupported vote type", voteType));
