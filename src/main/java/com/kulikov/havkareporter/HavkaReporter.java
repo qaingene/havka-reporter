@@ -7,7 +7,7 @@ import com.skype.SkypeException;
  */
 public interface HavkaReporter {
 
-    void printReport() throws Exception;
+    void printReport() throws SkypeException;
 
     void closeProgram();
 }
