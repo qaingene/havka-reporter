@@ -4,6 +4,8 @@ import com.skype.ChatMessage;
 import com.skype.SkypeException;
 import com.skype.User;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -14,10 +16,11 @@ import java.util.List;
  */
 public class ChatMessageFilter {
 
-    private static final int STARTDATEHOUR = 7;
+    private static final int STARTDATEHOUR = 6;
     private static final int STARTDATEMINUTE = 00;
-    private static final int ENDDATEHOUR = 10;
+    private static final int ENDDATEHOUR = 12;
     private static final int ENDDATEMINUTE = 00;
+    private static Calendar calendar = Calendar.getInstance();
 
     /**
      * Method returns list of messages which were received between startDate and endDate
@@ -59,7 +62,6 @@ public class ChatMessageFilter {
     }
 
     private static Date getTodayDate(int hours, int minutes){
-        Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, hours);
         calendar.set(Calendar.MINUTE, minutes);
         return calendar.getTime();
@@ -73,7 +75,7 @@ public class ChatMessageFilter {
         return getTodayDate(ENDDATEHOUR, ENDDATEMINUTE);
     }
 
-    public static List<User> getVotedUsersList(List<ChatMessage> chatMessageList) throws SkypeException {
+    public static List<User> getVotedUsersListFromChatMessagesList(List<ChatMessage> chatMessageList) throws SkypeException {
         List<User> votedUsersList = new ArrayList<User>();
         for(ChatMessage chatMessage: chatMessageList){
             votedUsersList.add(chatMessage.getSender());
