@@ -18,7 +18,7 @@ public final class Constants {
 
 //    ---------------
 
-    public static final String PRINTREPORT = "ebash";
+    public static final String PRINTREPORT = "report";
 
     public static final String CLOSEPROGRAM = "xt";
 
