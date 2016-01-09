@@ -21,13 +21,19 @@ public class UserGroups {
 
     private static String [] fourthTemplateGroup = Constants.FOURTHTEMPLATEGROUP;
 
-    private static List<User> firstTargetGroup = new ArrayList<User>();
-    private static List<User> secondTargetGroup = new ArrayList<User>();
-    private static List<User> thirdTargetGroup = new ArrayList<User>();
-    private static List<User> fourthTargetGroup = new ArrayList<User>();
+    private static List<User> firstTargetGroup;
+    private static List<User> secondTargetGroup;
+    private static List<User> thirdTargetGroup;
+    private static List<User> fourthTargetGroup;
 
     public static UserGroups calculatePeople(List<User> userList) {
         String userId ="";
+
+        firstTargetGroup = new ArrayList<User>();
+        secondTargetGroup = new ArrayList<User>();
+        thirdTargetGroup = new ArrayList<User>();
+        fourthTargetGroup = new ArrayList<User>();
+
         for(User user: userList){
             userId = user.getId();
             if(isUserPresentInList(firstTemplateGroup, userId)){
