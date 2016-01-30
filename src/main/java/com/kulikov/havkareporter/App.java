@@ -25,6 +25,8 @@ public class App {
             JOptionPane.showMessageDialog(null, "Login to your skype and re-launch program");
         }
     }
+
+    // test comments
 }
 
 
