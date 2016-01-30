@@ -10,8 +10,6 @@ import junit.framework.TestSuite;
 public class AppTest 
     extends TestCase
 {
-
-    // update for gkTestBranch
     /**
      * Create the test case
      *
@@ -37,13 +35,5 @@ public class AppTest
     {
         assertTrue( true );
     }
-
-
-    // update for master branch
-
-
-
-    // it's sting for gkTestBranch (hot fix)
-
 }
 
