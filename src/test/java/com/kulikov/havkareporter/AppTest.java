@@ -42,5 +42,8 @@ public class AppTest
     // update for master branch
 
 
-    // new string
+
+    // it's sting for gkTestBranch (hot fix)
+
 }
+
